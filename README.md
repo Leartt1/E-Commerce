@@ -1,3 +1,84 @@
+# E-commerce Platform
+
+A modern e-commerce platform with a React frontend and PHP/MySQL backend. The platform includes a backoffice dashboard for managing products, orders, clients, and media, as well as a page builder for creating custom layouts.
+
+## Project Structure
+
+### Frontend (React)
+
+```
+src/
+├── api/                 # API services
+│   ├── products/        # Product API
+│   ├── layouts/         # Layout API
+│   ├── media/           # Media API
+│   ├── orders/          # Order API
+│   └── clients/         # Client API
+│
+├── features/            # Feature-based organization
+│   ├── products/        # Product management
+│   ├── orders/          # Order management
+│   ├── clients/         # Client management
+│   ├── media/           # Media management
+│   ├── pageBuilder/     # Page builder feature
+│   ├── backoffice/      # Admin dashboard
+│   └── auth/            # Authentication
+│
+├── layout/              # Layout components
+│   └── styles/          # Layout-specific styles
+│
+├── common/              # Shared utilities
+│   ├── components/      # Reusable components
+│   ├── hooks/           # Custom React hooks
+│   └── utils/           # Utility functions
+│
+└── assets/              # Static assets
+    └── styles/          # Global styles
+```
+
+### Backend (PHP)
+
+```
+php/
+├── api/                 # API endpoints
+├── controllers/         # Business logic
+├── models/              # Data models
+├── config/              # Configuration
+├── utils/               # Utility functions
+├── uploads/             # Upload directories
+│   ├── products/        # Product images
+│   └── media/           # General media
+└── img/                 # Static images
+```
+
+## Features
+
+- **Product Management**: Add, edit, delete, and view products
+- **Order Management**: View and update order status
+- **Client Management**: View and manage customer information
+- **Media Management**: Upload and manage images
+- **Page Builder**: Create custom page layouts with drag-and-drop interface
+- **Responsive Design**: Optimized for desktop and mobile devices
+
+## Getting Started
+
+1. Clone the repository
+2. Set up the backend:
+
+   - Configure database connection in `php/config/dbcon.php`
+   - Ensure PHP server is running
+
+3. Set up the frontend:
+   - Run `npm install` to install dependencies
+   - Run `npm start` to start the development server
+
+## Technology Stack
+
+- **Frontend**: React, React Router, Bootstrap, React DnD
+- **Backend**: PHP, MySQL
+- **API**: REST API endpoints
+- **Storage**: File system for media storage, MySQL for data
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
