@@ -1,13 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { DndProvider } from "react-dnd"; // Import DndProvider
+import { HTML5Backend } from "react-dnd-html5-backend"; // Import HTML5Backend
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* Wrap the entire App with DndProvider */}
+    <DndProvider backend={HTML5Backend}>
+      <App />
+    </DndProvider>
   </React.StrictMode>
 );
 
